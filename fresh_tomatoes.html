@@ -13,6 +13,11 @@
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
+            font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+            color: white;
+            background-color: black;
+            font-size: 16px;
+            margin: 0;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -34,7 +39,7 @@
             padding-top: 20px;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: #2d2d2d;
             cursor: pointer;
         }
         .scale-media {
@@ -48,8 +53,38 @@
             width: 100%;
             left: 0;
             top: 0;
-            background-color: white;
+            background-color: #000000;
         }
+        .favorites {
+            line-height: 0.5;
+            text-align: center;
+            font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+            color: white;
+            font-size: 16px;
+        }
+        .favorites span {
+            display: inline-block;
+            position: relative;  
+        }
+        .favorites span:before,
+        .favorites span:after {
+            content: "Favorites";
+            position: absolute;
+            height: 5px;
+            border-bottom: 1px solid white;
+            border-top: 1px solid white;
+            top: 0;
+            width: 600px;
+        }
+        .favorites span:before {
+            right: 100%;
+            margin-right: 15px;
+        }
+        .favorites span:after {
+            left: 100%;
+            margin-left: 15px;
+        }
+
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -102,21 +137,62 @@
         </div>
       </div>
     </div>
+    <div class="favorites"> Favorites </div>
+    <div class="movies"> Movies </div>
     <div class="container">
       
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="rNk1Wi8SvNc" data-toggle="modal" data-target="#trailer">
-    <img src="http://www.filmtakeout.com/wp-content/uploads/2014/07/TOYSTORY.jpg" width="220" height="342">
+    <img src="https://vignette.wikia.nocookie.net/jack-millers-webpage-of-disney/images/7/75/Toy_Story_DVD_cover.jpg/revision/latest?cb=20150609223407" width="220" height="342">
     <h2>Toy Story</h2>
+    <h2>G</h2>
+    <p>A story a boy and his toys that come to life.</p>
+    <p>Release date: 1995</p>
+
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="6ziBFh3V1aM" data-toggle="modal" data-target="#trailer">
     <img src="https://cps-static.rovicorp.com/2/Open/20th%20Century%20Fox/Avatar/_9by13/_derived_jpg_q90_410x410_m0/Avatar-PosterArt.jpg?partner=allrovi.com" width="220" height="342">
     <h2>Avatar</h2>
+    <h2>PG-13</h2>
+    <p>A marine on an alien planet.</p>
+    <p>Release date: 2009</p>
+
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="hVVY6i7vJXU" data-toggle="modal" data-target="#trailer">
     <img src="https://vignette.wikia.nocookie.net/transcripts/images/f/fd/Disney%27s_Brother_Bear_-_iTunes_DVD_Poster.jpeg/revision/latest?cb=20170206001444" width="220" height="342">
     <h2>Brother Bear</h2>
+    <h2>G</h2>
+    <p>A man turns into a bear, and can only be changed back if he embraces his new identity.</p>
+    <p>Release date: 2003</p>
+
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="zx3LT_G3cIA" data-toggle="modal" data-target="#trailer">
+    <img src="https://cdn-images-1.medium.com/max/1000/1*ibiKVRfLzrsFAdye8Mj4WQ.jpeg" width="220" height="342">
+    <h2>The Lion King</h2>
+    <h2>G</h2>
+    <p>When a lion cub decides to start a new life alone, he is in for more than he expected.</p>
+    <p>Release date: 1994</p>
+
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="mp2SbaK8dDg" data-toggle="modal" data-target="#trailer">
+    <img src="http://cdn7.nflximg.net/images/1837/3021837.jpg" width="220" height="342">
+    <h2>Shark Tale</h2>
+    <h2>PG</h2>
+    <p>A small fish and a shark work together to become famous, and live the lavish life.</p>
+    <p>Release date: 2004</p>
+
+</div>
+
+<div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="yCOPJi0Urq4" data-toggle="modal" data-target="#trailer">
+    <img src="https://fanart.tv/fanart/movies/269149/movieposter/zootopia-573f3f2c6d6ee.jpg" width="220" height="342">
+    <h2>Zootopia</h2>
+    <h2>PG</h2>
+    <p>A little rabbit leaves her home for the big city to accomplsh the impossibe.</p>
+    <p>Release date: 2016</p>
+
 </div>
 
     </div>

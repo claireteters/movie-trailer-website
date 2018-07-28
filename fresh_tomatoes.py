@@ -2,7 +2,6 @@ import webbrowser
 import os
 import re
 
-
 # Styles and scripting for the page
 main_page_head = '''
 <!DOCTYPE html>
@@ -19,6 +18,11 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
+            font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+            color: white;
+            background-color: black;
+            font-size: 16px;
+            margin: 0;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -40,7 +44,7 @@ main_page_head = '''
             padding-top: 20px;
         }
         .movie-tile:hover {
-            background-color: #EEE;
+            background-color: #2d2d2d;
             cursor: pointer;
         }
         .scale-media {
@@ -54,8 +58,38 @@ main_page_head = '''
             width: 100%;
             left: 0;
             top: 0;
-            background-color: white;
+            background-color: #000000;
         }
+        .favorites {
+            line-height: 0.5;
+            text-align: center;
+            font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+            color: white;
+            font-size: 16px;
+        }
+        .favorites span {
+            display: inline-block;
+            position: relative;  
+        }
+        .favorites span:before,
+        .favorites span:after {
+            content: "Favorites";
+            position: absolute;
+            height: 5px;
+            border-bottom: 1px solid white;
+            border-top: 1px solid white;
+            top: 0;
+            width: 600px;
+        }
+        .favorites span:before {
+            right: 100%;
+            margin-right: 15px;
+        }
+        .favorites span:after {
+            left: 100%;
+            margin-left: 15px;
+        }
+
     </style>
     <script type="text/javascript" charset="utf-8">
         // Pause the video when the modal is closed
@@ -112,6 +146,8 @@ main_page_content = '''
         </div>
       </div>
     </div>
+    <div class="favorites"> Favorites </div>
+    <div class="movies"> Movies </div>
     <div class="container">
       {movie_tiles}
     </div>
@@ -125,6 +161,10 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
+    <h2>{movie_rating}</h2>
+    <p>{movie_storyline}</p>
+    <p>Release date: {movie_release_year}</p>
+
 </div>
 '''
 
@@ -144,8 +184,11 @@ def create_movie_tiles_content(movies):
         # Append the tile for the movie with its content filled in
         content += movie_tile_content.format(
             movie_title=movie.title,
+            movie_rating=movie.rating,
+            movie_storyline=movie.storyline,
             poster_image_url=movie.poster_image_url,
-            trailer_youtube_id=trailer_youtube_id
+            trailer_youtube_id=trailer_youtube_id,
+            movie_release_year=movie.release_year
         )
     return content
 
