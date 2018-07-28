@@ -5,7 +5,7 @@ import media
     poster image link, video trailer link, release year, and movie rating."""
 def main():
     toy_story = media.Movie("Toy Story", 
-                    "A story a boy and his toys that come to life.", 
+                    "A story of a boy and his toys that come to life.", 
                     "https://vignette.wikia.nocookie.net/jack-millers-webpage-of-disney/images/7/75/Toy_Story_DVD_cover.jpg/revision/latest?cb=20150609223407", 
                     "https://www.youtube.com/watch?v=rNk1Wi8SvNc",
                     "1995",

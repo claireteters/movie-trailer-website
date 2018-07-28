@@ -13,11 +13,17 @@
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
-            font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-            color: white;
             background-color: black;
-            font-size: 16px;
             margin: 0;
+            font-family: "Lucida Grande", Tahoma;
+            font-size: 10px;
+            font-weight: lighter;
+            font-variant: normal;
+            text-transform: uppercase;
+            color: #666666;
+            margin-top: 10px;
+            text-align: center!important;
+            letter-spacing: 0.3em;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -55,34 +61,35 @@
             top: 0;
             background-color: #000000;
         }
-        .favorites {
-            line-height: 0.5;
+        .movies {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size:30px;
+            margin-top: 5px; margin-bottom: 0px;
             text-align: center;
-            font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-            color: white;
-            font-size: 16px;
+            font-weight: normal;
+            color: #666666;
+            overflow: hidden;
         }
-        .favorites span {
+        h1 {
             display: inline-block;
-            position: relative;  
+            padding: 0 15px;
+            position: relative;
         }
-        .favorites span:before,
-        .favorites span:after {
-            content: "Favorites";
+        h1:before,
+        h1:after {
+            background: #666666;
+            content: "";
+            display: block;
+            height: 1px;
             position: absolute;
-            height: 5px;
-            border-bottom: 1px solid white;
-            border-top: 1px solid white;
-            top: 0;
-            width: 600px;
+            top: 50%;
+            width: 400%;
         }
-        .favorites span:before {
+        h1:before {
             right: 100%;
-            margin-right: 15px;
         }
-        .favorites span:after {
+        h1:after {
             left: 100%;
-            margin-left: 15px;
         }
 
     </style>
@@ -137,61 +144,60 @@
         </div>
       </div>
     </div>
-    <div class="favorites"> Favorites </div>
-    <div class="movies"> Movies </div>
+    <div class="movies"><h1> Movies </h1></div>
     <div class="container">
       
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="rNk1Wi8SvNc" data-toggle="modal" data-target="#trailer">
     <img src="https://vignette.wikia.nocookie.net/jack-millers-webpage-of-disney/images/7/75/Toy_Story_DVD_cover.jpg/revision/latest?cb=20150609223407" width="220" height="342">
     <h2>Toy Story</h2>
-    <h2>G</h2>
-    <p>A story a boy and his toys that come to life.</p>
-    <p>Release date: 1995</p>
+    <h4>G</h4>
+    <p>A story of a boy and his toys that come to life.</p>
+    <p>Released: 1995</p>
 
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="6ziBFh3V1aM" data-toggle="modal" data-target="#trailer">
     <img src="https://cps-static.rovicorp.com/2/Open/20th%20Century%20Fox/Avatar/_9by13/_derived_jpg_q90_410x410_m0/Avatar-PosterArt.jpg?partner=allrovi.com" width="220" height="342">
     <h2>Avatar</h2>
-    <h2>PG-13</h2>
+    <h4>PG-13</h4>
     <p>A marine on an alien planet.</p>
-    <p>Release date: 2009</p>
+    <p>Released: 2009</p>
 
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="hVVY6i7vJXU" data-toggle="modal" data-target="#trailer">
     <img src="https://vignette.wikia.nocookie.net/transcripts/images/f/fd/Disney%27s_Brother_Bear_-_iTunes_DVD_Poster.jpeg/revision/latest?cb=20170206001444" width="220" height="342">
     <h2>Brother Bear</h2>
-    <h2>G</h2>
+    <h4>G</h4>
     <p>A man turns into a bear, and can only be changed back if he embraces his new identity.</p>
-    <p>Release date: 2003</p>
+    <p>Released: 2003</p>
 
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="zx3LT_G3cIA" data-toggle="modal" data-target="#trailer">
     <img src="https://cdn-images-1.medium.com/max/1000/1*ibiKVRfLzrsFAdye8Mj4WQ.jpeg" width="220" height="342">
     <h2>The Lion King</h2>
-    <h2>G</h2>
+    <h4>G</h4>
     <p>When a lion cub decides to start a new life alone, he is in for more than he expected.</p>
-    <p>Release date: 1994</p>
+    <p>Released: 1994</p>
 
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="mp2SbaK8dDg" data-toggle="modal" data-target="#trailer">
     <img src="http://cdn7.nflximg.net/images/1837/3021837.jpg" width="220" height="342">
     <h2>Shark Tale</h2>
-    <h2>PG</h2>
+    <h4>PG</h4>
     <p>A small fish and a shark work together to become famous, and live the lavish life.</p>
-    <p>Release date: 2004</p>
+    <p>Released: 2004</p>
 
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="yCOPJi0Urq4" data-toggle="modal" data-target="#trailer">
     <img src="https://fanart.tv/fanart/movies/269149/movieposter/zootopia-573f3f2c6d6ee.jpg" width="220" height="342">
     <h2>Zootopia</h2>
-    <h2>PG</h2>
+    <h4>PG</h4>
     <p>A little rabbit leaves her home for the big city to accomplsh the impossibe.</p>
-    <p>Release date: 2016</p>
+    <p>Released: 2016</p>
 
 </div>
 

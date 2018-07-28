@@ -18,11 +18,17 @@ main_page_head = '''
     <style type="text/css" media="screen">
         body {
             padding-top: 80px;
-            font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-            color: white;
             background-color: black;
-            font-size: 16px;
             margin: 0;
+            font-family: "Lucida Grande", Tahoma;
+            font-size: 10px;
+            font-weight: lighter;
+            font-variant: normal;
+            text-transform: uppercase;
+            color: #666666;
+            margin-top: 10px;
+            text-align: center!important;
+            letter-spacing: 0.3em;
         }
         #trailer .modal-dialog {
             margin-top: 200px;
@@ -60,34 +66,35 @@ main_page_head = '''
             top: 0;
             background-color: #000000;
         }
-        .favorites {
-            line-height: 0.5;
+        .movies {
+            font-family: Georgia, "Times New Roman", Times, serif;
+            font-size:30px;
+            margin-top: 5px; margin-bottom: 0px;
             text-align: center;
-            font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
-            color: white;
-            font-size: 16px;
+            font-weight: normal;
+            color: #666666;
+            overflow: hidden;
         }
-        .favorites span {
+        h1 {
             display: inline-block;
-            position: relative;  
+            padding: 0 15px;
+            position: relative;
         }
-        .favorites span:before,
-        .favorites span:after {
-            content: "Favorites";
+        h1:before,
+        h1:after {
+            background: #666666;
+            content: "";
+            display: block;
+            height: 1px;
             position: absolute;
-            height: 5px;
-            border-bottom: 1px solid white;
-            border-top: 1px solid white;
-            top: 0;
-            width: 600px;
+            top: 50%;
+            width: 400%;
         }
-        .favorites span:before {
+        h1:before {
             right: 100%;
-            margin-right: 15px;
         }
-        .favorites span:after {
+        h1:after {
             left: 100%;
-            margin-left: 15px;
         }
 
     </style>
@@ -146,8 +153,7 @@ main_page_content = '''
         </div>
       </div>
     </div>
-    <div class="favorites"> Favorites </div>
-    <div class="movies"> Movies </div>
+    <div class="movies"><h1> Movies </h1></div>
     <div class="container">
       {movie_tiles}
     </div>
@@ -161,9 +167,9 @@ movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
     <img src="{poster_image_url}" width="220" height="342">
     <h2>{movie_title}</h2>
-    <h2>{movie_rating}</h2>
+    <h4>{movie_rating}</h4>
     <p>{movie_storyline}</p>
-    <p>Release date: {movie_release_year}</p>
+    <p>Released: {movie_release_year}</p>
 
 </div>
 '''
