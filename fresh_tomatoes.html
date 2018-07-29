@@ -44,10 +44,6 @@
             margin-bottom: 20px;
             padding-top: 20px;
         }
-        .movie-tile:hover {
-            background-color: #2d2d2d;
-            cursor: pointer;
-        }
         .scale-media {
             padding-bottom: 56.25%;
             position: relative;
@@ -90,6 +86,35 @@
         }
         h1:after {
             left: 100%;
+        }
+        .image {
+            opacity: 1;
+            backface-visibility: hidden;
+            width: 220px;
+            height: 342px;
+        }
+        .fadeParent {
+            width: 220px;
+            height: 342px;
+            margin: 0 auto;
+        }
+        .fadeParent:hover .image {
+            opacity: 0.3;
+            transition: .5s ease;
+        }
+        .playButton {
+            height: 50px;
+            position: relative;
+            bottom: 190px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .playButton:hover {
+            transition: 150ms ease;
+            height: 55px;
+        }
+        .fadeParent:hover .playButton {
+            opacity: 1;
         }
 
     </style>
@@ -148,57 +173,81 @@
     <div class="container">
       
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="rNk1Wi8SvNc" data-toggle="modal" data-target="#trailer">
-    <img src="https://vignette.wikia.nocookie.net/jack-millers-webpage-of-disney/images/7/75/Toy_Story_DVD_cover.jpg/revision/latest?cb=20150609223407" width="220" height="342">
-    <h2>Toy Story</h2>
-    <h4>G</h4>
-    <p>A story of a boy and his toys that come to life.</p>
-    <p>Released: 1995</p>
-
+    <div class="fadeParent">
+            <img src="./images/toyStory.jpg" class="image"/>
+    <div class="middleChild">
+        <img class="playButton" src="./images/playButton3.png"/>
+    </div>
+   </div>
+        <h2>Toy Story</h2>
+        <h4>G</h4>
+        <p>A story of a boy and his toys that come to life.</p>
+        <p>Released: 1995</p>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="6ziBFh3V1aM" data-toggle="modal" data-target="#trailer">
-    <img src="https://cps-static.rovicorp.com/2/Open/20th%20Century%20Fox/Avatar/_9by13/_derived_jpg_q90_410x410_m0/Avatar-PosterArt.jpg?partner=allrovi.com" width="220" height="342">
-    <h2>Avatar</h2>
-    <h4>PG-13</h4>
-    <p>A marine on an alien planet.</p>
-    <p>Released: 2009</p>
-
+    <div class="fadeParent">
+            <img src="./images/avatar.jpg" class="image"/>
+    <div class="middleChild">
+        <img class="playButton" src="./images/playButton3.png"/>
+    </div>
+   </div>
+        <h2>Avatar</h2>
+        <h4>PG-13</h4>
+        <p>A marine on an alien planet.</p>
+        <p>Released: 2009</p>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="hVVY6i7vJXU" data-toggle="modal" data-target="#trailer">
-    <img src="https://vignette.wikia.nocookie.net/transcripts/images/f/fd/Disney%27s_Brother_Bear_-_iTunes_DVD_Poster.jpeg/revision/latest?cb=20170206001444" width="220" height="342">
-    <h2>Brother Bear</h2>
-    <h4>G</h4>
-    <p>A man turns into a bear, and can only be changed back if he embraces his new identity.</p>
-    <p>Released: 2003</p>
-
+    <div class="fadeParent">
+            <img src="./images/brotherBear.jpg" class="image"/>
+    <div class="middleChild">
+        <img class="playButton" src="./images/playButton3.png"/>
+    </div>
+   </div>
+        <h2>Brother Bear</h2>
+        <h4>G</h4>
+        <p>A man turns into a bear, and can only be changed back if he embraces his new identity.</p>
+        <p>Released: 2003</p>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="zx3LT_G3cIA" data-toggle="modal" data-target="#trailer">
-    <img src="https://cdn-images-1.medium.com/max/1000/1*ibiKVRfLzrsFAdye8Mj4WQ.jpeg" width="220" height="342">
-    <h2>The Lion King</h2>
-    <h4>G</h4>
-    <p>When a lion cub decides to start a new life alone, he is in for more than he expected.</p>
-    <p>Released: 1994</p>
-
+    <div class="fadeParent">
+            <img src="./images/theLionKing.jpeg" class="image"/>
+    <div class="middleChild">
+        <img class="playButton" src="./images/playButton3.png"/>
+    </div>
+   </div>
+        <h2>The Lion King</h2>
+        <h4>G</h4>
+        <p>When a lion cub decides to start a new life alone, he is in for more than he expected.</p>
+        <p>Released: 1994</p>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="mp2SbaK8dDg" data-toggle="modal" data-target="#trailer">
-    <img src="http://cdn7.nflximg.net/images/1837/3021837.jpg" width="220" height="342">
-    <h2>Shark Tale</h2>
-    <h4>PG</h4>
-    <p>A small fish and a shark work together to become famous, and live the lavish life.</p>
-    <p>Released: 2004</p>
-
+    <div class="fadeParent">
+            <img src="./images/sharkTale.jpg" class="image"/>
+    <div class="middleChild">
+        <img class="playButton" src="./images/playButton3.png"/>
+    </div>
+   </div>
+        <h2>Shark Tale</h2>
+        <h4>PG</h4>
+        <p>A small fish and a shark work together to become famous, and live the lavish life.</p>
+        <p>Released: 2004</p>
 </div>
 
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="yCOPJi0Urq4" data-toggle="modal" data-target="#trailer">
-    <img src="https://fanart.tv/fanart/movies/269149/movieposter/zootopia-573f3f2c6d6ee.jpg" width="220" height="342">
-    <h2>Zootopia</h2>
-    <h4>PG</h4>
-    <p>A little rabbit leaves her home for the big city to accomplsh the impossibe.</p>
-    <p>Released: 2016</p>
-
+    <div class="fadeParent">
+            <img src="./images/zootopia.jpg" class="image"/>
+    <div class="middleChild">
+        <img class="playButton" src="./images/playButton3.png"/>
+    </div>
+   </div>
+        <h2>Zootopia</h2>
+        <h4>PG</h4>
+        <p>A little rabbit leaves her home for the big city to accomplsh the impossibe.</p>
+        <p>Released: 2016</p>
 </div>
 
     </div>

@@ -49,10 +49,6 @@ main_page_head = '''
             margin-bottom: 20px;
             padding-top: 20px;
         }
-        .movie-tile:hover {
-            background-color: #2d2d2d;
-            cursor: pointer;
-        }
         .scale-media {
             padding-bottom: 56.25%;
             position: relative;
@@ -95,6 +91,35 @@ main_page_head = '''
         }
         h1:after {
             left: 100%;
+        }
+        .image {
+            opacity: 1;
+            backface-visibility: hidden;
+            width: 220px;
+            height: 342px;
+        }
+        .fadeParent {
+            width: 220px;
+            height: 342px;
+            margin: 0 auto;
+        }
+        .fadeParent:hover .image {
+            opacity: 0.3;
+            transition: .5s ease;
+        }
+        .playButton {
+            height: 50px;
+            position: relative;
+            bottom: 190px;
+            opacity: 0;
+            cursor: pointer;
+        }
+        .playButton:hover {
+            transition: 150ms ease;
+            height: 55px;
+        }
+        .fadeParent:hover .playButton {
+            opacity: 1;
         }
 
     </style>
@@ -165,12 +190,16 @@ main_page_content = '''
 # A single movie entry html template
 movie_tile_content = '''
 <div class="col-md-6 col-lg-4 movie-tile text-center" data-trailer-youtube-id="{trailer_youtube_id}" data-toggle="modal" data-target="#trailer">
-    <img src="{poster_image_url}" width="220" height="342">
-    <h2>{movie_title}</h2>
-    <h4>{movie_rating}</h4>
-    <p>{movie_storyline}</p>
-    <p>Released: {movie_release_year}</p>
-
+    <div class="fadeParent">
+            <img src="{poster_image_url}" class="image"/>
+    <div class="middleChild">
+        <img class="playButton" src="./images/playButton3.png"/>
+    </div>
+   </div>
+        <h2>{movie_title}</h2>
+        <h4>{movie_rating}</h4>
+        <p>{movie_storyline}</p>
+        <p>Released: {movie_release_year}</p>
 </div>
 '''
 

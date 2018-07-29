@@ -6,7 +6,7 @@ import media
 def main():
     toy_story = media.Movie("Toy Story", 
                     "A story of a boy and his toys that come to life.", 
-                    "https://vignette.wikia.nocookie.net/jack-millers-webpage-of-disney/images/7/75/Toy_Story_DVD_cover.jpg/revision/latest?cb=20150609223407", 
+                    "./images/toyStory.jpg", 
                     "https://www.youtube.com/watch?v=rNk1Wi8SvNc",
                     "1995",
                     "G")
@@ -14,7 +14,7 @@ def main():
 
     avatar = media.Movie("Avatar",
                     "A marine on an alien planet.",
-                    "https://cps-static.rovicorp.com/2/Open/20th%20Century%20Fox/Avatar/_9by13/_derived_jpg_q90_410x410_m0/Avatar-PosterArt.jpg?partner=allrovi.com",
+                    "./images/avatar.jpg",
                     "https://www.youtube.com/watch?v=6ziBFh3V1aM",
                     "2009",
                     "PG-13")
@@ -22,7 +22,7 @@ def main():
 
     brother_bear = media.Movie("Brother Bear",
                     "A man turns into a bear, and can only be changed back if he embraces his new identity.",
-                    "https://vignette.wikia.nocookie.net/transcripts/images/f/fd/Disney%27s_Brother_Bear_-_iTunes_DVD_Poster.jpeg/revision/latest?cb=20170206001444",
+                    "./images/brotherBear.jpg",
                     "https://www.youtube.com/watch?v=hVVY6i7vJXU",
                     "2003",
                     "G")   
@@ -30,7 +30,7 @@ def main():
 
     lion_king = media.Movie("The Lion King",
                     "When a lion cub decides to start a new life alone, he is in for more than he expected.",
-                    "https://cdn-images-1.medium.com/max/1000/1*ibiKVRfLzrsFAdye8Mj4WQ.jpeg",
+                    "./images/theLionKing.jpeg",
                     "https://www.youtube.com/watch?v=zx3LT_G3cIA",
                     "1994",
                     "G")
@@ -38,7 +38,7 @@ def main():
                     
     shark_tail = media.Movie("Shark Tale",
                     "A small fish and a shark work together to become famous, and live the lavish life.",
-                    "http://cdn7.nflximg.net/images/1837/3021837.jpg",
+                    "./images/sharkTale.jpg",
                     "https://www.youtube.com/watch?v=mp2SbaK8dDg",
                     "2004",
                     "PG")
@@ -46,7 +46,7 @@ def main():
 
     zootopia = media.Movie("Zootopia",
                     "A little rabbit leaves her home for the big city to accomplsh the impossibe.",
-                    "https://fanart.tv/fanart/movies/269149/movieposter/zootopia-573f3f2c6d6ee.jpg",
+                    "./images/zootopia.jpg",
                     "https://www.youtube.com/watch?v=yCOPJi0Urq4",
                     "2016",
                     "PG")
